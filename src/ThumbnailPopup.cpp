@@ -7,7 +7,7 @@ using namespace geode::prelude;
 #include "ThumbnailPopup.hpp"
 #include "utils.hpp"
 void ThumbnailPopup::onDownload(CCObject*sender){
-	std::string URL = fmt::format("https://raw.githubusercontent.com/cdc-sys/level-thumbnails/main/thumbs/{}.png", this->levelID);
+	std::string URL = fmt::format("https://raw.githubusercontent.com/kacygd/cps-thumbnails/main/thumbs/{}.png", this->levelID);
 	CCApplication::sharedApplication()->openURL(URL.c_str());
 }
 void ThumbnailPopup::openDiscordServerPopup(){
@@ -55,7 +55,7 @@ bool ThumbnailPopup::setup(int id) {
 		this->onDownloadFinished(CCSprite::createWithTexture(txtr));
 	}
 	else {
-		std::string URL = fmt::format("https://raw.githubusercontent.com/cdc-sys/level-thumbnails/main/thumbs/{}.png", levelID);
+		std::string URL = fmt::format("https://raw.githubusercontent.com/kacygd/cps-thumbnails/main/thumbs/{}.png", levelID);
 		auto req = web::WebRequest();
 		this->downloadListener.bind([this](web::WebTask::Event* e){
 			if (auto res = e->getValue()){
