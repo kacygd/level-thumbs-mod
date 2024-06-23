@@ -65,7 +65,7 @@ class $modify(MyLevelCell, LevelCell) {
 			this->onDownloadFinished(CCSprite::createWithTexture(txtr));
 			return;
 		}
-		std::string URL = fmt::format("https://raw.githubusercontent.com/cdc-sys/level-thumbnails/main/thumbs/{}.png",(int)this->m_level->m_levelID);
+		std::string URL = fmt::format("https://raw.githubusercontent.com/kacygd/cps-thumbnails/main/thumbs/{}.png",(int)this->m_level->m_levelID);
 
 		auto downloadProgressText = CCLabelBMFont::create("0%","bigFont.fnt");
 		downloadProgressText->setPosition({50,50});
