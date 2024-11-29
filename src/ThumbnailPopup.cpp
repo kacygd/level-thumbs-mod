@@ -9,7 +9,7 @@ using namespace geode::prelude;
 #include "ImageCache.hpp"
 
 void ThumbnailPopup::onDownload(CCObject* sender){
-    std::string URL = fmt::format("https://raw.githubusercontent.com/cdc-sys/level-thumbnails/main/thumbs/{}.png", m_levelID);
+    std::string URL = fmt::format("https://raw.githubusercontent.com/kacygd/cps-thumbnails/main/thumbs/{}.png", m_levelID);
     CCApplication::sharedApplication()->openURL(URL.c_str());
 }
 
@@ -22,7 +22,7 @@ void ThumbnailPopup::openDiscordServerPopup(CCObject* sender){
         "No Thanks", "JOIN!",
         [this](auto, bool btn2) {
             if (btn2) {
-                CCApplication::sharedApplication()->openURL("https://discord.gg/GuagJDsqds");
+                CCApplication::sharedApplication()->openURL("https://discord.gg/eZcynVMhrF");
             }
         }
     );
@@ -100,7 +100,7 @@ bool ThumbnailPopup::setup(int id) {
         return true;
     }
     
-    std::string URL = fmt::format("https://raw.githubusercontent.com/cdc-sys/level-thumbnails/main/thumbs/{}.png", m_levelID);
+    std::string URL = fmt::format("https://raw.githubusercontent.com/kacygd/cps-thumbnails/main/thumbs/{}.png", m_levelID);
 
     auto req = web::WebRequest();
     m_downloadListener.bind([this](web::WebTask::Event* e){
